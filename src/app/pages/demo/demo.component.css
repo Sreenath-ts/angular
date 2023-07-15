@@ -1,0 +1,39 @@
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown toggle button */
+  .dropdown-toggle {
+    background-color: #ccc;
+    color: #333;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #f9f9f9;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  /* Dropdown menu items */
+  .dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  /* Show the dropdown menu when the dropdown is open */
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  

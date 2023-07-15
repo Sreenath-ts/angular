@@ -1,0 +1,29 @@
+
+<input type="text" value="hi" appInputRestrict="^[a-zA-Z]+$">
+
+
+<div class="dropdown" appDropdown>
+    <button class="dropdown-toggle">Toggle Dropdown</button>
+    <ul class="dropdown-menu">
+      <li>Option 1</li>
+      <li>Option 2</li>
+      <li>Option 3</li>
+    </ul>
+  </div>
+
+  <div *appNgElse="true">
+    <p>reverse ngIf</p>
+  </div>
+
+  <hr>
+
+  <p>{{'nithya' | stringreturn}}</p>
+
+  <p>{{'nithya' | trunc:'...'}}</p>
+
+  <div>
+    <div *ngFor="let item of books | sorting : 'title' ">
+         <p>{{item.title}} by {{item.author}} in {{item.year}}</p>
+    </div>
+  </div>
+  

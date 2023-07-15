@@ -1,0 +1,21 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search...">
+<table style="border-spacing: 30px;">
+  <thead>
+    <tr>
+      <th (click)="addSearchProperties('title')" [class.active]="active">Title</th>
+      <th (click)="addSearchProperties('author')" [class.active]="active">Author</th>
+      <th (click)="addSearchProperties('year')" [class.active]="active">Year</th>
+      <th (click)="addSearchProperties('rating')" [class.active]="active">Rating</th>
+    </tr>
+  </thead>
+  <tbody >
+    <p>{{properties.toString()}}</p>
+    <tr  *ngFor="let bk of books | search :  searchTerm : properties">
+      <td>{{bk.title}}</td>
+      <td>{{bk.author}}</td>
+      <td>{{bk.year}}</td>
+      <td>{{bk.rating}}</td>
+    </tr>
+  </tbody>
+</table>
+
