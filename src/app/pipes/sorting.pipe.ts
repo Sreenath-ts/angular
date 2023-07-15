@@ -4,13 +4,18 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'sorting'
 })
 export class SortingPipe implements PipeTransform {
-   
+   private cache = new Map()
   transform(array: any[],property:string){
     if(!Array.isArray(array) || !property){
       return array
     }
     const cacheKey = `${property}-${JSON.stringify(array)}`
-    return array.slice().sort((a,b) : number=>{
+    if(this.cache.has(cacheKey)){
+      console.log('caching>>>>>>>>>>>>');
+      
+      return this.cache.get(cacheKey)
+    }
+    const sortData = array.slice().sort((a,b) : number=>{
        const valueA = this.getPropertyValue(a,property)
        const valueB = this.getPropertyValue(b,property)
       
@@ -23,6 +28,8 @@ export class SortingPipe implements PipeTransform {
         return 0
        } 
     }) ;
+     this.cache.set(cacheKey,sortData)
+    return sortData;
   }
 
   getPropertyValue(object:any,property:string){

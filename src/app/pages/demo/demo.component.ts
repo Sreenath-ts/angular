@@ -12,5 +12,17 @@ export class DemoComponent {
     { title: 'The Pragmatic Programmer', author: 'Andrew Hunt, David Thomas', year: 1999 },
     { title: 'Effective TypeScript', author: 'Dan Vanderkam', year: 2020 }
   ];
+
+  sort = ''
+
+  constructor(){
+    let num = 0
+    
+    // setInterval(()=>{
+    //   this.sort = ['title','year','author'][num] 
+    //   num++;
+    //   if(num==3) num = 0
+    // } ,2000 )
+  }
   
 }
