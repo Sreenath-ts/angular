@@ -20,4 +20,9 @@ describe('DemoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should have sort propert',()=>{
+    fixture = TestBed.createComponent(DemoComponent)
+    component = fixture.componentInstance;
+    expect(component.sort).toEqual('hii')
+  })
 });

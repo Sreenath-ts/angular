@@ -22,7 +22,7 @@
   <p>{{'nithya' | trunc:'...'}}</p>
 
   <div>
-    <div *ngFor="let item of books | sorting : 'title' ">
+    <div *ngFor="let item of books | sorting : 'year' ">
          <p>{{item.title}} by {{item.author}} in {{item.year}}</p>
     </div>
   </div>

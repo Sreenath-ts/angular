@@ -1,5 +1,20 @@
-<app-sample></app-sample> 
+<!-- <app-sample></app-sample> 
  <appTag></appTag> 
 <app-demo></app-demo>
 
-<app-search></app-search>
+<app-search></app-search> -->
+<!-- <router-outlet name="adminHeader"></router-outlet>
+<router-outlet name="header"></router-outlet>
+<router-outlet></router-outlet> -->
+
+<table>
+    <input type="text" [(ngModel)]="key">
+    <tr *ngFor="let item of sampleArray | advancedPipe : key ">
+          <td [innerHTML]="item.id"></td>
+          <td [innerHTML]="item.age"></td>
+          <td [innerHTML]="item.name"></td>
+          <td [innerHTML]="item.occupation"></td>
+    </tr>
+</table>
+
+

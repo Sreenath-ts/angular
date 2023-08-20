@@ -1,0 +1,11 @@
+span {
+    background-color: yellow;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td,tr {
+    border: 6px black;
+}

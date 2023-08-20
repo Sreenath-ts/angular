@@ -1,0 +1,7 @@
+<p>parent works!</p>
+
+<app-child [val]="value"></app-child>
+
+<div *ngFor="let each of array;trackBy:track">
+   <p>{{each.name}}</p> <p>{{each.id}}</p>
+</div>

@@ -1,0 +1,30 @@
+<style>
+    .err{
+      background-color: red;
+    }
+</style>
+
+<h1>Template Driven Form</h1>
+
+<form #myForm="ngForm" (ngSubmit)="templateFormSubmit(myForm)">
+<label for="name">Name Pleaase bitches</label> <br>
+<input type="text" ngModel #name="ngModel" name="name" minlength="10" required="true" email="true">
+<div *ngIf="!name.valid && name.touched &&name.hasError('minlength')"><span class="err">minlength needed </span></div>
+<div *ngIf="!name.valid && name.touched &&name.hasError('email')"><span class="err">invalid email needed</span></div>
+<button type="submit" [disabled]="!myForm.valid" >Submit</button>
+</form>
+
+<hr>
+
+
+<h1>Reactive form</h1>
+
+<form [formGroup]="form" (ngSubmit)="submit()"> 
+<label for="">email</label>
+<input type="email" formControlName="email">
+<div style="color: red;" *ngIf="errors.email.email">Inavlid email</div>
+<label for="">Name</label>
+<input type="text" formControlName="name">
+<div style="color: red;" *ngIf="errors.name.minLength">minlength not enough</div>
+<button type="submit">submit</button>
+</form>

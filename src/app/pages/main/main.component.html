@@ -1,0 +1,16 @@
+<a  [routerLink]="[{ outlets: { primary: 'home', header: 'header' } }]">Navigate</a>
+
+<a [routerLink]="[{outlets:{primary:'adminHome',adminHeader:'adminHeader'}}]">Admin navigate</a>
+
+<button (click)="api()">call</button>
+<h1 *ngIf="subject | async">Loading>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h1>
+<h1>{{data | json}}</h1>
+
+
+<div style="height: 300px; width: 100%;" #referenceDiv>
+   
+</div>
+
+<div style="height: 300px; width: 100%;"  id="myDiv">
+   
+</div>

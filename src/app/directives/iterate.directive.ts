@@ -15,6 +15,6 @@ export class IterateDirective {
 
 }
 
-  constructor(private templateRef:TemplateRef<any>,private viewContainer:ViewContainerRef) { }
+  constructor(private templateRef:TemplateRef<unknown>,private viewContainer:ViewContainerRef) { }
 
 }

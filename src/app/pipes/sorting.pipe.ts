@@ -9,10 +9,9 @@ export class SortingPipe implements PipeTransform {
     if(!Array.isArray(array) || !property){
       return array
     }
+    
     const cacheKey = `${property}-${JSON.stringify(array)}`
     if(this.cache.has(cacheKey)){
-      console.log('caching>>>>>>>>>>>>');
-      
       return this.cache.get(cacheKey)
     }
     const sortData = array.slice().sort((a,b) : number=>{
